@@ -37,7 +37,7 @@ function game(){
     computerScore = 0;
 
     for (let i = 0; i <5 ; i++){
-        const playerSelection = prompt("Make your selection: rock, paper, or scissors.");
+        const playerSelection = prompt("Please make a selection: 'rock', 'paper', 'scissors")
         const result = playRound(playerSelection, computerSelection);
         if (result.startsWith("You win")){
             playerScore++;
@@ -48,12 +48,13 @@ function game(){
     }
 
     if (playerScore > computerScore) {
-        console.log("You win the game!");
+        console.log("You win the game! " + playerScore + " : " + computerScore);
       } else if (playerScore < computerScore) {
-        console.log("You lose the game.");
+        console.log("You lose the game! " + playerScore + " : " + computerScore);
       } else {
-        console.log("The game is a tie.");
+        console.log("The game is a tie! " + playerScore + " : " + computerScore);
       }
+
 }
 
 game()
