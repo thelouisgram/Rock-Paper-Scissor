@@ -3,7 +3,7 @@ Rock Paper and scissor game for theodinproject
 
 PSEUDOCODE:
 
-<!--define the game options
+define the game options
 function to randomly generate the computer's choice
 function computerPlay() {
   return gameOptions[Math.floor(Math.random() * gameOptions.length)];
@@ -15,4 +15,4 @@ function playRound(playerSelection, computerSelection) {
   }
 function to play multiple rounds of the game
 start the game
-} -->
+} 
