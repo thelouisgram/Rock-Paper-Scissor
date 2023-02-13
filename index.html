@@ -4,9 +4,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/86cf6c5294.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+      </style>
+    <link rel="stylesheet" href="style.css">
     <title>Rock paper scissors</title>
 </head>
 <body>
+    <div class="gameTitle">
+    <img src="rck.png" alt="logo">
+    </div>
+    
+    <div class="scoreContainer">
+        <!-- <h2 class="scoreHeading">Score Board</h2> -->
+        <div class="scb">
+        <div class="updateScoreTitle">Player</div>
+        <div class="updateScoreTitle1">Computer</div>
+    </div>
+        <h3 class="updateScore">0 : 0</h3>
+        <h4 class="comment">Make your Move</h4>
+        <div class="result">
+            <h3 class="finalResult"></h3>
+        </div>
+    </div>
+
+    <div class="console">
+
+    <div class="playerContainer">
+    <div class="scorecard">
+    <i class="fa-solid fa-user"></i>
+    </div>
+    <div class="optionsPlayer">
+    <div class="rockPlayer"><img src="rock.png"></div>
+    <div class="paperPlayer"><img src="paper.png"></div>
+    <div class="scissorsPlayer"><img src="scissors.png"></div>
+    </div>
+    </div>
+
+    <div class="computerContainer">
+        <div class="scorecard">
+            <i class="fa-sharp fa-solid fa-desktop"></i>
+            </div>
+    <div class="optionsComputer">
+    <div class="rockComputer"><img src="rock.png"></div>
+    <div class="paperComputer"><img src="paper.png"></div>
+    <div class="scissorsComputer"><img src="scissors.png"></div>
+    </div>
+    </div>
+
+    </div>
+
+        <button class="play-again">Play Again</button>
+   
+
     <script src="script.js"></script>
 </body>
 </html>
