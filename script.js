@@ -72,6 +72,8 @@ playAgain.addEventListener('click', function(){
         if (playerSelection === computerSelection){
             comment.innerText = "It's a tie!"
             hands.style.display = 'block'
+            poop.style.display = 'none'
+            fire.style.display = 'none'
             updateScore.innerText = playerScore + ' : ' + computerScore;
         }
 
@@ -82,6 +84,8 @@ playAgain.addEventListener('click', function(){
         ){
             comment.innerText = "You won! " + playerSelection + " beats " + computerSelection + ".";
             fire.style.display = 'block'
+            poop.style.display = 'none'
+            hands.style.display = 'none'   
             playerScore++
             updateScore.innerText = playerScore + ' : ' + computerScore;
     }
@@ -90,6 +94,8 @@ playAgain.addEventListener('click', function(){
             computerScore++
             updateScore.innerText = playerScore + ' : ' + computerScore;
             poop.style.display = 'block'
+            hands.style.display = 'none'
+            fire.style.display = 'none'
         }
         
     }
