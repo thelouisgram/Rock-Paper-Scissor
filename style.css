@@ -112,8 +112,10 @@ body{
 
 .optionsPlayer div{
     width: 100px;
-    border-radius: 6px;
-    border: 2px solid black;
+    border-radius: 5px;
+background: linear-gradient(145deg, #cacaca, #f0f0f0);
+box-shadow:  5px 5px 10px #afafaf,
+             -5px -5px 10px #ffffff;
     padding: 10px;
     transition: .4s;
 }
@@ -144,9 +146,10 @@ body{
 
 .optionsComputer div{
     width: 100px;
-    border-radius: 6px;
-    background-color: white;
-    border: 2px solid black;
+    border-radius: 5px;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow:  5px 5px 10px #afafaf,
+                 -5px -5px 10px #ffffff;
     padding: 10px;
 }
 
