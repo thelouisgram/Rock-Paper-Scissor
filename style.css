@@ -149,6 +149,7 @@ box-shadow:  5px 5px 10px #afafaf,
 
 .optionsPlayer div:hover{
     cursor: pointer;
+    transform: scale(1.04);
 }
 
 .optionsPlayer div img{
