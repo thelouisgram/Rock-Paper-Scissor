@@ -13,7 +13,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-   
+    padding: 20px 0 20px 0px;
 }
 
 .gameTitle{
@@ -21,7 +21,7 @@ body{
     font-family: 'Audiowide', cursive;
 }
 
-.fa-user, .fa-desktop{
+.fa-gamepad, .fa-computer{
     font-size: 36px;
     margin-left: 20px;
     margin-bottom: 20px;
@@ -30,7 +30,7 @@ body{
 
 .scoreContainer{
     background-color: white;
-    padding: 20px 40px;
+    padding: 20px 0px;
     width: 300px;
     border-radius: 8px;
     margin-top: 20px;
@@ -42,6 +42,27 @@ body{
     transition: .4s;
 }
 
+.scorecard{
+    width: 45px;
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+
+.commentary{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.commentary img{
+    width: 25px;
+    display: none;
+}
+
+.scorecard img{
+    width: 100%;
+}
+
 .updateScoreTitle{
     padding: 4px 8px;
     font-size: 12px;
@@ -51,6 +72,7 @@ body{
     top: 35px;
     right: 115px;
     position: relative;
+    font-weight: 500;
 }
 
 .scb{
@@ -68,13 +90,23 @@ body{
     top: 35px;
     left: 125px;
     position: relative;
+    font-weight: 500;
 }
 
-.gameTitle{
+.gameTitle, .resultArea{
     max-width: 500px;
     top:30px;
     margin-bottom: 20px;
 }
+
+.resultArea{
+    display: none;
+}
+
+.resultArea img{
+    display: none;
+    width: 100%;
+} 
 
 .gameTitle img{
     width: 100%;
@@ -117,12 +149,9 @@ background: linear-gradient(145deg, #cacaca, #f0f0f0);
 box-shadow:  5px 5px 10px #afafaf,
              -5px -5px 10px #ffffff;
     padding: 10px;
-    transition: .4s;
 }
 
 .optionsPlayer div:hover{
-    transform: scale(1.04);
-    transition: .4s;
     cursor: pointer;
 }
 
@@ -148,9 +177,9 @@ box-shadow:  5px 5px 10px #afafaf,
     width: 100px;
     border-radius: 5px;
     background: linear-gradient(145deg, #cacaca, #f0f0f0);
-    box-shadow:  5px 5px 10px #afafaf,
-                 -5px -5px 10px #ffffff;
+    box-shadow:  5px 5px 10px #afafaf, -5px -5px 10px #ffffff;
     padding: 10px;
+    transform: .4s;
 }
 
 .optionsComputer div img{
@@ -171,19 +200,19 @@ box-shadow:  5px 5px 10px #afafaf,
     display: none;
 }
 
-.rockComputer.cmp{
-    transform: scale(1.07);
-    transform: .4s;
-}
+.rockPlayer.draw, .paperPlayer.draw, .scissorsPlayer.draw{
+    box-shadow: 0px 0px 4px #2b7791;
+        border: 1px solid #2b7791;
+        transform: scale(1.07);
+    }
 
-.paperComputer.cmp{
-    transform: scale(1.07);
-    transform: .4s;
-}
 
-.scissorsComputer.cmp{
+
+.rockComputer.draw, .paperComputer.draw, .scissorsComputer.draw{
     transform: scale(1.07);
     transform: .4s;
+    box-shadow: 0px 0px 4px #2b7791;
+    border: 1px solid #2b7791;
 }
 
 .comment{
@@ -193,21 +222,22 @@ box-shadow:  5px 5px 10px #afafaf,
 .play-again{
     border: none;
     background-color: white;
-    border-radius: 5px;
+    border-radius: 4px;
     padding: 6px 12px;
-    font-size: 18px;
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
 }
 
-@media (max-width:700px){
+@media (max-width:1000px){
     .console{
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
 }@media (max-width:450px){
-    .gameTitle{
+    .gameTitle, .resultArea{
         max-width: 350px;
-       
     }
 
     .playerContainer, .computerContainer{
@@ -218,30 +248,30 @@ box-shadow:  5px 5px 10px #afafaf,
     .optionsPlayer div, .optionsComputer div{
         width: 100px;
         width: 85px;
-}
- .console{
-    gap:20px
- }
-
-.scoreContainer{
-    margin-bottom: 20px;
-}
+    }
+    .console{
+        gap:20px
     }
 
-    @media (max-width:399px){
-        .gameTitle{
-            max-width: 300px;
-           margin-bottom: 10px;
-        }
+    .scoreContainer{
+        margin-bottom: 20px;
+    }
+    }
+
+@media (max-width:399px){
+    .gameTitle, .resultArea{
+        max-width: 300px;
+        margin-bottom: 10px;
+    }
     
-        .playerContainer, .computerContainer{
-            width: 300px;
-            padding: 20px 10px;
-        }
+    .playerContainer, .computerContainer{
+        width: 300px;
+        padding: 20px 10px;
+    }
     
-        .optionsPlayer div, .optionsComputer div{
-            width: 100px;
-            width: 80px;
+    .optionsPlayer div, .optionsComputer div{
+        width: 100px;
+        width: 80px;
     }
 
     .scoreContainer{
@@ -256,5 +286,30 @@ box-shadow:  5px 5px 10px #afafaf,
     .updateScoreTitle1{
         left:106px
     }
+}
 
+@media (max-width:370px){
+    .gameTitle{
+        max-width: 325px;
+        margin-bottom: 0px;
     }
+
+    .playerContainer, .computerContainer{
+        padding: 20px 10px;
+    }
+
+    
+.scorecard{
+    width: 35px;
+    margin-left: 20px;
+    margin-bottom: 8px;
+}
+    .resultArea{
+        max-width: 325px;
+        margin-bottom: 20px;
+    }
+    
+    .scoreContainer{
+        padding: 12px 0px;
+    }
+}

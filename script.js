@@ -11,52 +11,56 @@ const updateScore =document.querySelector('.updateScore')
 const finalResult = document.querySelector('.finalResult')
 const scoreContainer = document.querySelector('.scoreContainer')
 const playAgain = document.querySelector('.play-again')
+const resultArea = document.querySelector('.resultArea')
+const win = document.querySelector('.win')
+const lose = document.querySelector('.lose')
+const draw = document.querySelector('.draw')
+const fire = document.querySelector('.fire')
+const poop = document.querySelector('.poop')
+const hands = document.querySelector('.hands')
+
 
 
 rockPlayer.addEventListener('click', function(){
     playerSelection = 'rock'
     game();
     stopGame()
-    removeSign()
+    rockPlayer.classList.add('draw')
+    setTimeout(function(){rockPlayer.classList.remove('draw')}, 300)
 })
 
 scissorsPlayer.addEventListener('click', function(){
     playerSelection = 'scissors'
     game();
     stopGame()
-    removeSign()
-
+    scissorsPlayer.classList.add('draw')
+    setTimeout(function(){scissorsPlayer.classList.remove('draw')}, 300)
 })
 
 paperPlayer.addEventListener('click', function(){
     playerSelection = 'paper'
     game();
     stopGame()
-    removeSign()
-
+    paperPlayer.classList.add('draw')
+    setTimeout(function(){paperPlayer.classList.remove('draw')}, 300)
 })
 
 
 playAgain.addEventListener('click', function(){
-    location.reload();
+    updateScore.innerText = "0 : 0";
+    comment.innerText = "Make your Move"
+    console.style.display = 'flex'
+    resultArea.style.display = 'none'
+    win.style.display = 'none'
+    lose.style.display = 'none'
+    playAgain.style.display = 'none'
+    playerScore = 0;
+    computerScore = 0;
+    poop.style.display = 'none'
+    hands.style.display = 'none'
+    fire.style.display = 'none'
  });
-
-
-
-// define the game options
-
-
-
-   
-// function to randomly generate the computer's choice
-
   
-  
-  
-
-
-
-   
 
     playerScore = 0;
     computerScore = 0;
@@ -67,6 +71,7 @@ playAgain.addEventListener('click', function(){
 
         if (playerSelection === computerSelection){
             comment.innerText = "It's a tie!"
+            hands.style.display = 'block'
             updateScore.innerText = playerScore + ' : ' + computerScore;
         }
 
@@ -76,6 +81,7 @@ playAgain.addEventListener('click', function(){
             (playerSelection === "paper" && computerSelection === "rock")
         ){
             comment.innerText = "You won! " + playerSelection + " beats " + computerSelection + ".";
+            fire.style.display = 'block'
             playerScore++
             updateScore.innerText = playerScore + ' : ' + computerScore;
     }
@@ -83,6 +89,7 @@ playAgain.addEventListener('click', function(){
             comment.innerText = "You lost! " + computerSelection + " beats " + playerSelection + ".";
             computerScore++
             updateScore.innerText = playerScore + ' : ' + computerScore;
+            poop.style.display = 'block'
         }
         
     }
@@ -103,35 +110,33 @@ playAgain.addEventListener('click', function(){
 
             function compSign(){
             if (computerSelection == 'rock'){
-        rockComputer.classList.add('cmp')
+        rockComputer.classList.add('draw')
+        setTimeout(function(){rockComputer.classList.remove('draw')}, 300)
     } else if (computerSelection == 'paper'){
-        paperComputer.classList.add('cmp')
+        paperComputer.classList.add('draw')
+        setTimeout(function(){paperComputer.classList.remove('draw')}, 300)
     } else if (computerSelection == 'scissors'){
-        scissorsComputer.classList.add('cmp')
+        scissorsComputer.classList.add('draw')
+        setTimeout(function(){scissorsComputer.classList.remove('draw')}, 300)
     }
 }
 
     compSign();
 
-    function removeSign(){
-        rockComputer.classList.remove('cmp')
-        paperComputer.classList.remove('cmp')
-        paperComputer.classList.remove('cmp')
-    }
 }
 
 
-    
 
  function stopGame(){
+    resultArea.style.display = 'block'
     if (playerScore == 5){
-        comment.innerText = "You Win, Congrats!"
+        win.style.display = 'block'
         updateResult();
     } else if (computerScore == 5){
-        comment.innerText = "You Lose, Do better!"
+        lose.style.display = 'block'
         updateResult();
     } else if ((playerScore == 5) && (computerScore == 5)) {
-        comment.innerText = "It's A Draw, Try again!"
+        draw.style.display = 'block'
         updateResult();
     }
 
