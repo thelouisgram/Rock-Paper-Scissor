@@ -3,37 +3,34 @@
     margin: 0%;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    min-height: 100%;
 }
 
 body{
-    padding: 30px 0px;
     background: url('img.jpg') no-repeat center center/cover;
-    min-height: 100vh;
+    height: 100vh;
+}
+
+.rck-container{
+    width:350px;
+    margin-bottom: 40px;
+}
+
+.rck-container img{
+    width: 100%;
+}
+.container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
-    padding: 20px 0 20px 0px;
-}
-
-.gameTitle{
-    color: #faf6f6;
-    font-family: 'Audiowide', cursive;
-}
-
-.fa-gamepad, .fa-computer{
-    font-size: 36px;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    color: black;
 }
 
 .scoreContainer{
     background-color: white;
     padding: 20px 0px;
-    width: 300px;
+    width: 400px;
     border-radius: 8px;
-    margin-top: 20px;
     margin-bottom: 40px;
     display: flex;
     flex-direction: column;
@@ -64,32 +61,25 @@ body{
 }
 
 .updateScoreTitle{
-    padding: 4px 8px;
+    padding: 3px 6px;
     font-size: 12px;
     color: white;
     background: #363636;
     border-radius: 3px;
-    top: 35px;
-    right: 115px;
-    position: relative;
     font-weight: 500;
 }
 
 .scb{
     display: flex;
-    justify-content: space-between;
-    
+    gap: 28px;
 }
 
 .updateScoreTitle1{
-    padding: 4px 6px;
+    padding: 3px 6px;
     font-size: 12px;
     color: white;
     background: #363636;
     border-radius: 3px;
-    top: 35px;
-    left: 125px;
-    position: relative;
     font-weight: 500;
 }
 
@@ -101,11 +91,13 @@ body{
 
 .resultArea{
     display: none;
+    margin-bottom: 20px;
 }
 
 .resultArea img{
     display: none;
     width: 100%;
+    margin-bottom: 30px;
 } 
 
 .gameTitle img{
@@ -126,7 +118,6 @@ body{
 
 .updateScore{
     font-size: 60px;
-    margin-top: -20px;
 }
 
 .playerContainer{
@@ -223,7 +214,7 @@ box-shadow:  5px 5px 10px #afafaf,
     border: none;
     background-color: white;
     border-radius: 4px;
-    padding: 6px 12px;
+    padding: 8px 14px;
     font-size: 14px;
     font-weight: 800;
     cursor: pointer;
@@ -234,13 +225,19 @@ box-shadow:  5px 5px 10px #afafaf,
         display: flex;
         flex-direction: column-reverse;
     }
+    .computerContainer{
+        display: none;
+    }
 
+    
 }@media (max-width:450px){
-    .gameTitle, .resultArea{
+    .resultArea {
         max-width: 350px;
     }
 
-    .playerContainer, .computerContainer{
+  
+
+    .playerContainer, .scoreContainer, .computerContainer, .rck-container{
         width: 350px;
         padding: 20px 10px;
     }
@@ -259,12 +256,12 @@ box-shadow:  5px 5px 10px #afafaf,
     }
 
 @media (max-width:399px){
-    .gameTitle, .resultArea{
+    .resultArea{
         max-width: 300px;
         margin-bottom: 10px;
     }
     
-    .playerContainer, .computerContainer{
+    .playerContainer, .computerContainer, .rck-container, .scoreContainer{
         width: 300px;
         padding: 20px 10px;
     }
@@ -274,27 +271,12 @@ box-shadow:  5px 5px 10px #afafaf,
         width: 80px;
     }
 
-    .scoreContainer{
-        margin-bottom: 20px;
-        width: 275px
-    }
 
-    .updateScoreTitle{
-        right: 108px
-    }
-
-    .updateScoreTitle1{
-        left:106px
-    }
 }
 
 @media (max-width:370px){
-    .gameTitle{
-        max-width: 325px;
-        margin-bottom: 0px;
-    }
 
-    .playerContainer, .computerContainer{
+    .playerContainer, .computerContainer, .scoreContainer {
         padding: 20px 10px;
     }
 
@@ -309,7 +291,4 @@ box-shadow:  5px 5px 10px #afafaf,
         margin-bottom: 20px;
     }
     
-    .scoreContainer{
-        padding: 12px 0px;
-    }
 }

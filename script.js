@@ -47,7 +47,7 @@ paperPlayer.addEventListener('click', function(){
 
 
 playAgain.addEventListener('click', function(){
-    updateScore.innerText = "0 : 0";
+    updateScore.innerText = "0 - 0";
     comment.innerText = "Make your Move"
     console.style.display = 'flex'
     resultArea.style.display = 'none'
@@ -74,7 +74,7 @@ playAgain.addEventListener('click', function(){
             hands.style.display = 'block'
             poop.style.display = 'none'
             fire.style.display = 'none'
-            updateScore.innerText = playerScore + ' : ' + computerScore;
+            updateScore.innerText = playerScore + ' - ' + computerScore;
         }
 
         else if (
@@ -87,12 +87,12 @@ playAgain.addEventListener('click', function(){
             poop.style.display = 'none'
             hands.style.display = 'none'   
             playerScore++
-            updateScore.innerText = playerScore + ' : ' + computerScore;
+            updateScore.innerText = playerScore + ' - ' + computerScore;
     }
         else{
             comment.innerText = "You lost! " + computerSelection + " beats " + playerSelection + ".";
             computerScore++
-            updateScore.innerText = playerScore + ' : ' + computerScore;
+            updateScore.innerText = playerScore + ' - ' + computerScore;
             poop.style.display = 'block'
             hands.style.display = 'none'
             fire.style.display = 'none'
@@ -152,6 +152,8 @@ playAgain.addEventListener('click', function(){
  function updateResult(){
     console.style.display = 'none'
     playAgain.style.display = 'block'
+    playerScore = 0;
+    computerScore = 0;
  }
 
 
