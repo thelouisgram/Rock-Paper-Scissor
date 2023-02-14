@@ -9,15 +9,12 @@
 body{
     background: url('img.jpg') no-repeat center center/cover;
     min-height:100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;
 }
 
 .rck-container{
     width:350px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 .rck-container img{
