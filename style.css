@@ -208,15 +208,15 @@ box-shadow:  5px 5px 10px #afafaf,
 }
 
 .rockPlayer.draw, .paperPlayer.draw, .scissorsPlayer.draw{
-    box-shadow: 0px 0px 4px midnightblue;
-        border: 1px solid midnightblue;
+    box-shadow: 0px 0px 4px orange;
+        border: 1px solid orange;
     }
 
 
 
 .rockComputer.draw, .paperComputer.draw, .scissorsComputer.draw{
-    box-shadow: 0px 0px 4px midnightblue;
-    border: 1px solid midnightblue;
+    box-shadow: 0px 0px 4px orange;
+    border: 1px solid orange;
 }
 
 .comment{
