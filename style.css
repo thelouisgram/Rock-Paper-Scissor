@@ -14,8 +14,6 @@
 body{
     min-height:100vh;
     background-color:  var(--primary-bg);
-    
-
 }
 
 .header{
@@ -119,7 +117,6 @@ body{
 .resultArea img{
     display: none;
     width: 100%;
-    margin-bottom: 30px;
 } 
 
 .gameTitle img{
@@ -244,8 +241,6 @@ box-shadow:  5px 5px 10px #afafaf,
     .resultArea {
         max-width: 350px;
     }
-
-  
 
     .playerContainer, .scoreContainer, .computerContainer, .rck-container{
         width: 350px;
