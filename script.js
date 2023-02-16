@@ -18,6 +18,7 @@ const draw = document.querySelector('.draw')
 const fire = document.querySelector('.fire')
 const poop = document.querySelector('.poop')
 const hands = document.querySelector('.hands')
+const gameBoy = document.querySelector('.game')
 
 
 
@@ -59,6 +60,7 @@ playAgain.addEventListener('click', function(){
     poop.style.display = 'none'
     hands.style.display = 'none'
     fire.style.display = 'none'
+    gameBoy.style.display = 'block'
  });
   
 
@@ -74,6 +76,7 @@ playAgain.addEventListener('click', function(){
             hands.style.display = 'block'
             poop.style.display = 'none'
             fire.style.display = 'none'
+            gameBoy.style.display = 'none'
             updateScore.innerText = playerScore + ' - ' + computerScore;
         }
 
@@ -85,7 +88,8 @@ playAgain.addEventListener('click', function(){
             comment.innerText = "You won! " + playerSelection + " beats " + computerSelection + ".";
             fire.style.display = 'block'
             poop.style.display = 'none'
-            hands.style.display = 'none'   
+            hands.style.display = 'none'  
+            gameBoy.style.display = 'none'
             playerScore++
             updateScore.innerText = playerScore + ' - ' + computerScore;
     }
@@ -96,6 +100,7 @@ playAgain.addEventListener('click', function(){
             poop.style.display = 'block'
             hands.style.display = 'none'
             fire.style.display = 'none'
+            gameBoy.style.display = 'none'
         }
         
     }
@@ -141,12 +146,7 @@ playAgain.addEventListener('click', function(){
     } else if (computerScore == 5){
         lose.style.display = 'block'
         updateResult();
-    } else if ((playerScore == 5) && (computerScore == 5)) {
-        draw.style.display = 'block'
-        updateResult();
     }
-
-    
  }
 
  function updateResult(){
