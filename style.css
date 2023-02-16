@@ -117,10 +117,6 @@ body{
 .resultArea img{
     display: none;
     width: 100%;
-} 
-
-.gameTitle img{
-    width: 100%;
 }
 
 .scoreContainer.active{
@@ -242,6 +238,13 @@ box-shadow:  5px 5px 10px #afafaf,
         max-width: 350px;
     }
 
+    
+.scorecard{
+    width: 40px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
     .playerContainer, .scoreContainer, .computerContainer, .rck-container{
         width: 350px;
         padding: 20px 10px;
@@ -258,6 +261,14 @@ box-shadow:  5px 5px 10px #afafaf,
     .scoreContainer{
         margin-bottom: 20px;
     }
+    .header{
+        width: 100%;
+        text-align: center;
+        background-color: var(--secondary-bg);
+        padding: 5px 0px;
+        margin-bottom: 20px;
+    }
+    
     }
 
 @media (max-width:399px){
