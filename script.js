@@ -91,12 +91,12 @@ function playRound(playerSelection, computerSelection) {
     hands.style.display = "none";
     gameBoy.style.display = "none";
     playerScore++;
-    updateScore.innerText = playerScore + " - " + computerScore;
+    updateScore.innerText = playerScore + " : " + computerScore;
   } else {
     comment.innerText =
       "You lost! " + computerSelection + " beats " + playerSelection + ".";
     computerScore++;
-    updateScore.innerText = playerScore + " - " + computerScore;
+    updateScore.innerText = playerScore + " : " + computerScore;
     poop.style.display = "block";
     hands.style.display = "none";
     fire.style.display = "none";
