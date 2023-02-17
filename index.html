@@ -1,80 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/86cf6c5294.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
-  </style>
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/86cf6c5294.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+    </style>
+    <link rel="stylesheet" href="style.css" />
     <title>Rock paper scissors</title>
-</head>
-<div class="header"><h1 class="main-heading" id="discard">
-    ROCK PAPER SCISSORS
-</h1></div>
-<body>
-           <div class="container">
-            <div class="scoreContainer">
+  </head>
+  <div class="header">
+    <h1 class="main-heading" id="discard">ROCK PAPER SCISSORS</h1>
+  </div>
+  <body>
+    <div class="container">
+      <div class="scoreContainer">
         <div class="scb">
-        <div class="updateScoreTitle">Player</div>
-        <div class="updateScoreTitle1">Computer</div>
-    </div>
-        <h3 class="updateScore">0 - 0</h3>
+          <div class="updateScoreTitle">Player</div>
+          <div class="updateScoreTitle1">Computer</div>
+        </div>
+        <h3 class="updateScore">0 : 0</h3>
         <div class="commentary">
-        <h4 class="comment">Make your Move</h4>
-        <img src="https://img.icons8.com/emoji/100/null/video-game-emoji.png" style="display:block" class="game"/>
-        <img src="https://img.icons8.com/emoji/100/null/fire.png" class="fire"/>
-        <img src="https://img.icons8.com/emoji/48/null/pile-of-poo.png" class="poop"/>
-        <img src="https://img.icons8.com/emoji/48/null/folded-hands-emoji.png" class="hands"/>
+          <h4 class="comment">Make your Move</h4>
+          <img
+            src="https://img.icons8.com/emoji/100/null/video-game-emoji.png"
+            style="display: block"
+            class="game"
+          />
+          <img
+            src="https://img.icons8.com/emoji/100/null/fire.png"
+            class="fire"
+          />
+          <img
+            src="https://img.icons8.com/emoji/48/null/pile-of-poo.png"
+            class="poop"
+          />
+          <img
+            src="https://img.icons8.com/emoji/48/null/folded-hands-emoji.png"
+            class="hands"
+          />
         </div>
         <div class="result">
-            <h3 class="finalResult"></h3>
+          <h3 class="finalResult"></h3>
         </div>
+      </div>
+      <div class="console">
+        <div class="playerContainer">
+          <div class="scorecard">
+            <img src="person.png" alt="Person icon" />
+          </div>
+          <div class="optionsPlayer">
+            <div class="rockPlayer"><img src="rock.png" alt="rock icon" /></div>
+            <div class="paperPlayer">
+              <img src="paper.png" alt="paper icon" />
+            </div>
+            <div class="scissorsPlayer">
+              <img src="scissors.png" alt="scissors icon" />
+            </div>
+          </div>
+        </div>
+        <div class="computerContainer">
+          <div class="scorecard">
+            <img src="computer.png" alt="Computer icon" />
+          </div>
+          <div class="optionsComputer">
+            <div class="rockComputer">
+              <img src="rock.png" alt="rock icon" />
+            </div>
+            <div class="paperComputer">
+              <img src="paper.png" alt="paper icon" />
+            </div>
+            <div class="scissorsComputer">
+              <img src="scissors.png" alt="scissors icon" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="resultArea">
+        <img src="win.png" class="win" />
+        <img src="lose.png" class="lose" />
+        <img src="draw.png" class="draw" />
+      </div>
+      <button class="play-again">Play Again</button>
     </div>
-
-    <div class="console">
-
-    <div class="playerContainer">
-    <div class="scorecard">
-    <img src="person.png" alt="Person icon">
-    </div>
-    <div class="optionsPlayer">
-    <div class="rockPlayer"><img src="rock.png" alt="rock icon"></div>
-    <div class="paperPlayer"><img src="paper.png" alt="paper icon"></div>
-    <div class="scissorsPlayer"><img src="scissors.png" alt="scissors icon"></div>
-    </div>
-    </div>
-
-    <div class="computerContainer">
-        <div class="scorecard">
-    <img src="computer.png" alt="Computer icon">         
-   </div>
-    <div class="optionsComputer">
-    <div class="rockComputer"><img src="rock.png" alt="rock icon"></div>
-    <div class="paperComputer"><img src="paper.png" alt="paper icon"></div>
-    <div class="scissorsComputer"><img src="scissors.png" alt="scissors icon"></div>
-    </div>
-    </div>
-
-    </div>
-
-    <div class="resultArea">
-        <img src="win.png" class="win">
-        <img src="lose.png" class="lose">
-        <img src="draw.png" class="draw">
-    </div>
-
-        <button class="play-again">Play Again</button>
-   
-    </div>
-
     <p class="author">Designed by: Thelouisgram</p>
-
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
