@@ -223,21 +223,19 @@ body {
 
   .scorecard {
     width: 40px;
-    margin-left: 15px;
+    margin-left: 10px;
     margin-bottom: 10px;
   }
-
+  
   .playerContainer,
   .scoreContainer,
   .computerContainer,
   .rck-container {
-    width: 350px;
-    padding: 20px 10px;
+    padding: 20px 20px;
   }
 
   .optionsPlayer div,
   .optionsComputer div {
-    width: 100px;
     width: 85px;
   }
   .console {
@@ -266,15 +264,10 @@ body {
   .computerContainer,
   .rck-container,
   .scoreContainer {
-    /* width: 300px; */
     padding: 20px 10px;
   }
 
-  .optionsPlayer div,
-  .optionsComputer div {
-    /* width: 100px;
-        width: 80px; */
-  }
+ 
 }
 
 @media (max-width: 370px) {
@@ -286,7 +279,7 @@ body {
 
   .scorecard {
     width: 35px;
-    margin-left: 20px;
+    margin-left: 10px;
     margin-bottom: 8px;
   }
   .resultArea {
