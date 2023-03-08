@@ -71,7 +71,7 @@ body {
 }
 
 .updateScoreTitle {
-  padding: 3px 6px;
+  padding: 3px 10px;
   font-size: 1rem;
   color: var(--secondary-color);
   background: var(--primary-bg);
