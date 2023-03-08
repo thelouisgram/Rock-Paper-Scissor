@@ -6,7 +6,7 @@
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-family: "Roboto", sans-serif;
 
-  --primary-bg: #002233;
+  --primary-bg: #222;
   --secondary-bg: #f6f6f8;
   --primary-color: black;
   --secondary-color: #f6f6f8;
@@ -20,15 +20,13 @@ body {
 .header {
   width: 100%;
   text-align: center;
-  background-color: var(--secondary-bg);
-  padding: 5px 0px;
+  border-bottom: solid 1px #494949;
+  padding: 10px 0px;
   margin-bottom: 30px;
+  color:white;
+  font-size:.5rem
 }
 
-.main-heading {
-  color: var(--primary-color);
-  font-size: 1.2rem;
-}
 
 .container {
   display: flex;
@@ -246,10 +244,6 @@ body {
     margin-bottom: 20px;
   }
   .header {
-    width: 100%;
-    text-align: center;
-    background-color: var(--secondary-bg);
-    padding: 5px 0px;
     margin-bottom: 20px;
   }
 }
@@ -296,10 +290,6 @@ body {
   .updateScoreTitle,
   .updateScoreTitle1 {
     font-size: 0.8rem;
-  }
-
-  .header {
-    margin-bottom: 10px;
   }
 
 }
